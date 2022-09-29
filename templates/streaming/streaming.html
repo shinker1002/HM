@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        #stream{
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+    <script>
+        // $(window).on('load', function () {
+        //     setInterval(function(){
+        //         $.ajax({
+        //             type:'POST',
+        //             url:'/api/getStream/',
+        //             data: {'csrfmiddlewaretoken': '{{ csrf_token }}'},
+        //             success:function(json){
+        //                 // var time = new Date().getTime();
+        //                 // var imgname = json.result+'?time='+time;
+        //                 let base64 = `data:image/jpeg;base64,${json.check}`
+        //                 // console.log(imgname, time);
+        //                 console.log(base64)
+        //                 $("#stream").attr("src", base64);
+        //             }
+        //         });
+        //     }, 50)
+        // })
+    
+    </script>
+</head>
+<body>
+    <h1>Hi</h1>
+
+    <img id="stream" src="http://127.0.0.1:8000/api/getStream/">
+
+
+</body>

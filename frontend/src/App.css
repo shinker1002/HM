@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: 50;
+  src: url("./fonts/SourceSansPro-Regular.ttf")
+}
+*{
+  font-family: 'SourceSansPro';
+}
+.App {
+  text-align: center;
+}
