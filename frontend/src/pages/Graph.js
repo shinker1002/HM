@@ -259,15 +259,16 @@ const Graph = ({ view }) => {
             <button className={(mainButton ==="time" ? 'active4' : '')} onClick={setMainButtonTime}>시간대별</button>
           </div> :
           <div className='MainButton'>
-          <button>년도별</button>
-          <button>월별</button>
-          <button>일별</button>
-          <button>시간대별</button>
-        </div> }
+            {/* <button>년도별</button>
+            <button>월별</button>
+            <button>일별</button>
+            <button>시간대별</button> */}
+          </div> 
+        }
           
           <div className='Calendar'>
             <LocalizationProvider dateAdapter={AdapterDateFns}>
-              {mainButton === "year" && 
+              {/* {mainButton === "year" && 
                 <DesktopDatePicker
                   inputFormat={"yyyy-MM-dd"}
                   mask={"____-__-__"}
@@ -278,7 +279,7 @@ const Graph = ({ view }) => {
                   }}
                   renderInput={(params) => <TextField {...params} />}
                 />
-              }
+              } */}
               {mainButton === "month" &&
                 <DesktopDatePicker
                   views={['year']}

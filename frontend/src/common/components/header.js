@@ -14,7 +14,6 @@ const HeaderBlock = styled.div`
   color:#eeeeee;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
   z-index:20;
-  padding: 0px 8px;
 
 `;
 const Logo = styled.div`
@@ -38,14 +37,13 @@ const Wrapper = styled(Responsive)`
   display: flex;
   align-items: center;
   justify-content: space-between; /* 자식 엘리먼트 사이에 여백을 최대로 설정 */
+  padding: 0px 40px;
   .leftDiv{
     display:flex;
     height:64px;
-    padding-right:80px;
     .logo {
       width:120px;
       height:57px;
-      margin-left:30px;
       display:flex;
       align-items: center;
       justify-content:center;
@@ -102,7 +100,6 @@ const Wrapper = styled(Responsive)`
   }
   
   .right {
-    min-width:263px;
     display: flex;
     align-items: center;
     justify-content:flex-end;
@@ -123,10 +120,9 @@ const Spacer = styled.div`
 `;
 
 const UserInfo = styled.div`
-  margin-top:5px;
+  font-size: 25px;
   font-weight: 800;
   margin-right: 1rem;
-  font-family: sans-serif;
   `;
 
 const Header = ({ user, view, ModeOnControl, mode }) => {
@@ -149,7 +145,6 @@ const Header = ({ user, view, ModeOnControl, mode }) => {
               <div className='openCvChange' onClick={ModeOnControl}>
                 <div className='cvOn'>{ view ==='모니터링' && mode && <BsFillPersonCheckFill />}</div>
                 <div className='cvOff'>{ view ==='모니터링' && !mode && <BsFillPersonXFill />}</div>
-                
               </div>
             </div>
           </div>

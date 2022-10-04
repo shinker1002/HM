@@ -128,7 +128,9 @@ const Container = styled.div`
   }
   .view{
     width:100%;
+    height: 100%;
     height:calc(100vh - 64px);
+    padding: 5px;
     background:#e9ecef;
     display:flex;
     flex-direction:column;
@@ -169,10 +171,8 @@ const VideoContainer = styled.div`
   justify-content:center;
   align-items: center;
   box-shadow: 0px 1px 2px;
-  img{
-    width:70%;
-    max-width:100%;
-    max-height:100%;
+  .imgFlex{
+    margin: auto;
   }
 `;
 
@@ -223,7 +223,7 @@ const View = () => {
           
           {/* {state === "qwer1234" ? <Img video="check"/> : <Img video="origin"/>} */}
           {/* {state === "qwer1234" ? <Img video="check"/> : <Img video="origin"/>} */}
-          <div>
+          <div className='imgFlex'>
             {mode ? <Img video="result"/> : <Img video="origin"/>}
           </div>
 
