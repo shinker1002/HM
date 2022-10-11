@@ -33,7 +33,6 @@ const Img = ({video}) => {
     <>
       {video === "result" ? <img key={key} src={`http://localhost:8000/api/result_getStream`} alt="cctvImage" /> :
       <img key={key} src={`http://localhost:8000/api/origin_getStream`} alt="cctvImage" />}
-
     </>
   )
 }

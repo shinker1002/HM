@@ -7,6 +7,8 @@ import Graph from './Graph';
 import Img from './img';
 import { useState, useEffect } from 'react';
 import {  BsClock,  BsBarChartLine,  BsCameraVideo } from "react-icons/bs"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRepeat } from "@fortawesome/free-solid-svg-icons";
 
 const Container = styled.div`
   display:flex;
@@ -60,7 +62,7 @@ const Container = styled.div`
             display:flex;
             align-items: center;
             justify-content:center;
-            color:#eeeeee;
+            color:white;
             width:50px;
             margin-right:10px;
             .icon_margin{
@@ -78,7 +80,7 @@ const Container = styled.div`
           }
           .text{
             font-size:20px;
-            color:#eeeeee;
+            color:white;
             margin:auto 0;
             @media screen and (max-width: 900px) {
               display:none;
@@ -101,7 +103,7 @@ const Container = styled.div`
             display:flex;
             align-items: center;
             justify-content:center;
-            color:#eeeeee;
+            color:white;
             width:50px;
             margin-right:10px;
             .icon_margin{
@@ -116,7 +118,7 @@ const Container = styled.div`
           }
           .text{
             font-size:20px;
-            color:#eeeeee;
+            color:white;
             margin:auto 0;
           }
         }
@@ -140,7 +142,7 @@ const Container = styled.div`
       display:flex;
       width:95%;
       height:90%;
-      background:#eeeeee;
+      background:white;
       .subView{
         display:flex;
         flex-direction:column;
@@ -149,12 +151,12 @@ const Container = styled.div`
         .subViewCircle{
           width:100%;
           height:49%;
-          background:#eeeeee;
+          background:white;
           box-shadow: 0px 1px 2px;
         }
         .subViewBar{
           height:49%;
-          background:#eeeeee;
+          background:white;
           box-shadow: 0px 1px 2px;
         }
       }
@@ -166,6 +168,7 @@ const VideoContainer = styled.div`
   width: 97%;
   height: 95%;
   min-height:400px;
+  position: relative;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -173,6 +176,27 @@ const VideoContainer = styled.div`
   box-shadow: 0px 1px 2px;
   .imgFlex{
     margin: auto;
+  }
+  .cvChange{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #d9d9d9;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    :hover{
+      background-color: #ffffff;
+    }
+    :active{
+      border: 2px solid black;
+    }
+    .cvIcon{
+      font-size: 30px;
+    }
   }
 `;
 
@@ -190,7 +214,7 @@ const View = () => {
   return <>{(!state) ? 
   (<Error/>) :
   (<>
-    <Header user={ state } view={view} ModeOnControl = {ModeOnControl} mode ={mode} />
+    <Header user={ state } view={view}/>
     <Container>
       <div className='navBar'>
         <div className='point' />
@@ -224,6 +248,9 @@ const View = () => {
           {/* {state === "qwer1234" ? <Img video="check"/> : <Img video="origin"/>} */}
           {/* {state === "qwer1234" ? <Img video="check"/> : <Img video="origin"/>} */}
           <div className='imgFlex'>
+            <button className='cvChange' onClick={ModeOnControl} >
+              <FontAwesomeIcon className='cvIcon' icon={faRepeat} />
+            </button>
             {mode ? <Img video="result"/> : <Img video="origin"/>}
           </div>
 

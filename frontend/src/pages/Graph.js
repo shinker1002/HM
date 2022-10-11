@@ -32,7 +32,7 @@ const ViewTotal = styled.div`
     justify-content: space-between; /* 자식 엘리먼트 사이에 여백을 최대로 설정 */
     width:30%;
     height:100%;
-    @media screen and (max-width: 1350px) {
+    @media screen and (max-width: 1460px) {
       display: none;
     }
     .subViewCircle{
@@ -41,7 +41,7 @@ const ViewTotal = styled.div`
       justify-content:center;
       width:100%;
       height:49%;
-      background:#eeeeee;
+      background:white;
       box-shadow: 0px 1px 2px;
     }
     .subViewBar{
@@ -50,7 +50,7 @@ const ViewTotal = styled.div`
       justify-content:center;
       width:100%;
       height:49%;
-      background:#eeeeee;
+      background:white;
       box-shadow: 0px 1px 2px;
     }
   }
@@ -64,10 +64,10 @@ const GraphView = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction:column;
-  background:#eeeeee;
+  background:white;
   margin-right: 1%;
   box-shadow: 0px 1px 2px;
-  @media screen and (max-width: 1350px) {
+  @media screen and (max-width: 1460px) {
     width: 100%;
     margin-left:1%;
   }
@@ -115,19 +115,19 @@ const GraphView = styled.div`
         }
         .active1{
           background:#91BAFF;
-          color:#eeeeee;
+          color:white;
         }
         .active2{
           background:#3399ff;
-          color:#eeeeee;
+          color:white;
         }
         .active3{
           background:#0095db;
-          color:#eeeeee;
+          color:white;
         }
         .active4{
           background:#0084c2;
-          color:#eeeeee;
+          color:white;
         }
       }
       .Calendar{

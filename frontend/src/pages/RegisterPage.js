@@ -62,7 +62,6 @@ const Footer = styled.div`
 
 /* 화면 전체를 채움 */
 const AuthTemplateBlock = styled.div`
-  min-width:580px;
   min-height:784px;
   background-size: 1920px;
   background-image: linear-gradient( rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5) ), url("https://images.unsplash.com/photo-1528642474498-1af0c17fd8c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80");
@@ -81,7 +80,11 @@ const AuthTemplateBlock = styled.div`
     width: 1280px;
     box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);
     @media screen and (max-width: 1280px) {
-    width:580px;
+      width:640px;
+    }
+    @media screen and (max-width: 680px) {
+      width:100vw;
+      height: 100%;
     }
   }
 `;
@@ -99,7 +102,12 @@ const RightBox = styled.div`
   border-radius: 0px 10px 10px 0px;
   background: white;
   @media screen and (max-width: 1280px) {
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 15px;
+  }
+  @media screen and (max-width: 680px) {
+    border-radius: 0px;
+    width: 100vw;
+    height: 100vh;
   }
 `;
 const LeftBox = styled.div`

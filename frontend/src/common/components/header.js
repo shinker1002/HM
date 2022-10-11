@@ -50,7 +50,7 @@ const Wrapper = styled(Responsive)`
       font-size: 1.125rem;
       font-weight: 800;
       letter-spacing: 2px;
-      margin-right:80px;
+      margin-right:90px;
     }
     .menuDiv{
       margin-left:15px;
@@ -79,24 +79,6 @@ const Wrapper = styled(Responsive)`
         }
       }
     }
-    .openCvChange{
-      cursor:pointer;
-      margin-left:50px;
-      color:#eeeeee;
-      padding-top:10px;
-      font-size:35px;
-      .cvOn{
-        color:#0067a3;
-      }
-      .cvOff{
-        color:#c4302b;
-      }
-      @media screen and (max-width: 900px) {
-        margin-left:-50px;
-
-      }
-    }
-    
   }
   
   .right {
@@ -125,7 +107,7 @@ const UserInfo = styled.div`
   margin-right: 1rem;
   `;
 
-const Header = ({ user, view, ModeOnControl, mode }) => {
+const Header = ({ user, view }) => {
   return (
     <>
       <HeaderBlock>
@@ -142,10 +124,7 @@ const Header = ({ user, view, ModeOnControl, mode }) => {
               { view ==='전체통계' && <BsBarChartLine />}
               </div>
               <p>{view}</p>
-              <div className='openCvChange' onClick={ModeOnControl}>
-                <div className='cvOn'>{ view ==='모니터링' && mode && <BsFillPersonCheckFill />}</div>
-                <div className='cvOff'>{ view ==='모니터링' && !mode && <BsFillPersonXFill />}</div>
-              </div>
+
             </div>
           </div>
           <div className="right">
